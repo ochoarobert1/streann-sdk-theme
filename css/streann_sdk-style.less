@@ -1,0 +1,233 @@
+/* --------------------------------------------------------------
+/* MAIN LESS MIXINS AND FUNCTIONS - LESSHAT
+-------------------------------------------------------------- */
+@import 'less/_lesshat.less';
+/* --------------------------------------------------------------
+Variables
+-------------------------------------------------------------- */
+
+/* Colors */
+@black: #000000;
+@gray3: #333333;
+@gray6: #666666;
+@gray9: #999999;
+@grayc: #cccccc;
+@grayf0: #f0f0f0;
+@white: #ffffff;
+@blue: #2B7BCB;
+@orange: #FFB12A;
+
+/* --------------------------------------------------------------
+Body default
+-------------------------------------------------------------- */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    .transition(all .2s ease-in-out);
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+
+.page-container {
+    min-height: 85vh;
+}
+
+.container {
+    max-width: 1370px;
+}
+
+.the-header {
+    background: #eaeaea;
+    padding: 1rem;
+
+    & .header-logo {}
+
+
+}
+
+
+.sdk-main-container {
+    background: rgb(240, 240, 240);
+    background: -moz-linear-gradient(90deg, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(90deg, rgba(240, 240, 240, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f0f0f0", endColorstr="#ffffff", GradientType=1);
+}
+
+.sdk-main-content {
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    background: @white;
+    min-height: 100vh;
+
+    & blockquote {
+        margin: 1rem 0;
+        background: #f9f9f9;
+        padding: 2rem;
+        font-size: 1rem;
+        font-family: monospace;
+        line-height: 1rem;
+    }
+}
+
+.sdk-main-nav {
+    padding: 2rem 0;
+
+    & ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        & li {
+            & a {
+                color: @gray6;
+                display: block;
+                padding: .5rem 1rem;
+                border-top: 1px solid #e4e4e4;
+                font-size: 0.9rem;
+                .transition(all .3s ease-in-out);
+
+                &:hover {
+                    background: #828282;
+                    color: @white;
+                }
+            }
+
+            &:last-child {
+                & a {
+                    border-bottom: 1px solid #e4e4e4;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+.sdk-affix-nav {
+    padding: 2rem 1rem;
+    background: white;
+
+    & h4 {
+        font-size: 1rem;
+        font-weight: 300;
+        color: gray;
+
+        & .fa {
+            font-size: .9rem;
+        }
+    }
+
+    & ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        & li {
+            & a {
+                color: @gray6;
+                display: block;
+                padding: 0.2rem 0;
+                font-size: 0.8rem;
+
+                &:hover {
+                    color: #828282;
+                }
+            }
+        }
+    }
+}
+
+.topics-article-item {
+    padding: 2rem 1rem;
+    font-size: 1.1rem;
+    line-height: 2rem;
+}
+
+.wp-caption {
+    max-width: 100%;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.row-login {
+    min-height: 100vh;
+
+    & .log-in-container {
+        text-align: center;
+    }
+
+    & .login-logo img {
+        max-width: 460px;
+    }
+
+
+}
+
+#loginform {
+    max-width: 400px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #e0e0e0;
+    box-shadow: 0 0 16px #f9f9f9;
+    border-radius: 10px;
+
+    & label {
+        display: block;
+    }
+
+    & input[type=text] {
+        width: 100%;
+        border-radius: 10px;
+        padding: 0.5rem;
+        border: 0;
+        margin-bottom: 0.2rem;
+    }
+
+    & input[type=password] {
+        width: 100%;
+        border-radius: 10px;
+        padding: 0.5rem;
+        border: 0;
+        margin-bottom: 0.2rem;
+    }
+
+    & #wp-submit {
+        background: #fc5000;
+        color: white;
+        padding: 0.5rem;
+        display: block;
+        width: 100%;
+        border: 0;
+        margin-top: 1rem;
+    }
+}
+
+
+.error-login {
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
+    background: whitesmoke;
+    color: @black;
+    border-top: 5px solid #fc5000;
+    padding: 1rem;
+    text-align: center;
+
+    & h2 {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+}
